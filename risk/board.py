@@ -237,7 +237,7 @@ class Board(object):
             new_terr = queue.popleft()
             if new_terr == target:
                 return True
-            for terr in list(risk.definitions.territoty_neighbors[new_terr]):
+            for terr in list(risk.definitions.territory_neighbors[new_terr]):
                 if terr in visited_terr \
                         or self.owner(terr) != self.owner(source):
                     pass
