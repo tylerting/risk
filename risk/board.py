@@ -198,13 +198,13 @@ class Board(object):
             if new_terr == target:
                 return path[new_terr]
             for terr in list(risk.definitions.territory_neighbors[new_terr]):
-                if terr in new_terr:
+                if terr in visited:
                     pass
                 else:
                     temp = copy.deepcopy(path[new_terr])
                     temp.append(terr)
                     if terr in path:
-                        if len(temp) <len(path[terr]):
+                        if len(temp) < len(path[terr]):
                             path[terr] = temp
                             queue.append(terr)
                     else:
