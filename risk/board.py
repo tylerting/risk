@@ -235,62 +235,6 @@ class Board(object):
             new_terr = queue.popleft()
             if new_terr == target:
                 return True
-            for terr in list(risk.definitions.territory_neighbors[new_terr]):
-                if terr in visited \
-                        or self.owner(terr) !\ self.owner(source)
-                    pass
-                else:
-                    temp = copy.deepcopy(path_dict[new_terr])
-                    temp.append(terr)
-                    if terr in path:
-                        if len(temp) < len(path[terr]):
-                            path[terr] = temp
-                            queue.append(terr)
-                        else:
-                            path[terr] = temp
-                            queue.append(terr)
-            visited.add(new_terr)
-        return False
-
-
-    def cheapest_attack_path(self, source, target):
-        '''
-        This function uses Dijkstra's algorithm to calculate a cheapest valid attack path between two territories if such a path exists.
-        There may be multiple valid cheapest attack paths (in which case it doesn't matter which this function returns),
-        or there may be no valid attack paths (in which case the function returns None).
-
-        Args:
-            source (int): territory_id of source node
-            target (int): territory_id of target node
-
-        Returns:
-        '''
-
-
-    def can_fortify(self, source, target):
-        '''
-        At the end of a turn, a player may choose to fortify a target territory by moving armies from a source territory.
-        In order for this to be a valid move,
-        there must be a valid path between the source and target territories that is owned entirely by the same player.
-
-        Args:
-            source (int): the source territory_id
-            target (int): the target territory_id
-
-        Returns:
-            bool: True if reinforcing the target from the source territory is a valid move
-        '''
-        path = dict()
-        path[source] = [source]
-        queue = deque([])
-        queue.append(source)
-        visited = set()
-        visited.add(source)
-
-        while queue:
-            new_terr = queue.popleft()
-            if new_terr == target:
-                return True
             for terr in list(risk.definitions.territoty_neighbors[new_terr]):
                 if terr in visited_terr \
                         or self.owner(terr) != self.owner(source):
