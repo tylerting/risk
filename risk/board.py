@@ -277,7 +277,7 @@ class Board(object):
 
         while a:
             new_terr, priority = a.peekitem()
-            a.pop[new_terr]
+            a.pop(new_terr)
             if new_terr == target:
                 return path[new_terr]
             for terr in list(risk.definitions.territory_neighbors[new_terr]):
