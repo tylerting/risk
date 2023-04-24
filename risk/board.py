@@ -1,6 +1,8 @@
 import os
 import random
-from collections import namedtuple
+from collections import deque, namedtuple
+import copy
+import heapdict
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
