@@ -167,6 +167,7 @@ class Board(object):
             costs += self.armies(path[i])
         return costs
 
+
     def shortest_path(self, source, target):
         '''
         This function uses BFS to find the shortest path between source and target.
