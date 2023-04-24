@@ -306,10 +306,10 @@ class Board(object):
         Returns:
             bool: True if a valid attack path exists between source and target; else False
         '''
-        if self.cheapest_attack_path(source, target):
-            return True
-        else:
+        if self.cheapest_attack_path(source, target) == None or source == target:
             return False
+        else:
+            return True
 
 
     # ======================= #
