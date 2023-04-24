@@ -253,7 +253,7 @@ class Board(object):
         return False
 
     
-    def cheapest_attack_path(self, source, target);
+    def cheapest_attack_path(self, source, target):
         '''
         This function uses Dijkstra's algorithm to calculate a cheapest valid attack path between two territories if such a path exists.
         There may be multiple valid cheapest attack paths (in which case it doesn't matter which this function returns),
