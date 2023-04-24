@@ -243,7 +243,7 @@ class Board(object):
                     temp = copy.deepcopy(path[new_terr])
                     temp.append(terr)
                     if terr in path:
-                        if len(temp) < len(path[terr])
+                        if len(temp) < len(path[terr]):
                             path[terr] = temp
                             queue.append(terr)
                     else:
