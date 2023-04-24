@@ -238,7 +238,7 @@ class Board(object):
             if new_terr == target:
                 return True
             for terr in list(risk.definitions.territory_neighbors[new_terr]):
-                if terr in visited_terr \
+                if terr in visited \
                         or self.owner(terr) != self.owner(source):
                     pass
                 else:
